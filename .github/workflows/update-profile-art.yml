@@ -1,0 +1,44 @@
+name: Update profile art
+"on":
+  schedule:
+    - cron: "17 6 * * *"   # todos los días ~03:17 (Argentina)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r scripts/requirements.txt
+
+      # Retrato ASCII: se regenera si no existe, si lo corrés a mano o si cambiaste photo/
+      - name: Decide if portrait needs rebuild
+        id: portrait
+        run: |
+          if [ ! -f assets/ascii-portrait.svg ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -q '^photo/'; then
+            echo "build=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Build ASCII portrait
+        if: steps.portrait.outputs.build == 'true'
+        run: |
+          pip install "rembg[cpu]" || echo "rembg no se instaló; se usa flood-fill"
+          cd scripts && python prep_photo.py && python make_ascii_svg.py
+
+      - name: Info card
+        run: cd scripts && python make_info_card.py
+
+      - name: Contribution heatmap
+        run: cd scripts && python fetch_contributions.py && python render_heatmap_svg.py
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh profile art [skip ci]"
+          file_pattern: "assets/*.svg data/contributions.json"
