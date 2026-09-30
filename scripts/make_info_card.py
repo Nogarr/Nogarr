@@ -5,7 +5,7 @@ from common import ASSETS, BG, BORDER, FG, MUTED, ACCENT, ACCENT2, FONT, CARD_HE
 
 HEADER = "valentin@nogarr"
 LINES = [
-    ("Rol", "Semi Senior Full Stack Developer"),
+    ("Rol", "Full Stack Developer"),
     ("Base", "Buenos Aires, Argentina · Remoto"),
     ("Foco", "Sistemas de gestión a medida"),
     ("", ""),
