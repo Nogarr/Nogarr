@@ -17,15 +17,15 @@ Complemento el perfil técnico con formación en Product Management y experienci
 
 <h3>$ cat stack.txt</h3>
 
-| | |
-|---|---|
-| **Lenguajes** | TypeScript · JavaScript · Python · SQL · HTML · CSS |
-| **Frontend** | React · Next.js · React Native · Tailwind CSS |
-| **Backend** | Node.js · NestJS · Fastify · REST APIs |
-| **Bases de datos** | PostgreSQL · Supabase · MySQL |
-| **DevOps** | Docker · CI/CD (GitHub Actions) · Vercel |
-| **Integraciones** | n8n · WhatsApp API · OpenRouter |
-| **Desarrollo con IA** | Claude Code · Cursor |
+<table>
+  <tr><td><b>Lenguajes</b></td><td>TypeScript · JavaScript · Python · SQL · HTML · CSS</td></tr>
+  <tr><td><b>Frontend</b></td><td>React · Next.js · React Native · Tailwind CSS</td></tr>
+  <tr><td><b>Backend</b></td><td>Node.js · NestJS · Fastify · REST APIs</td></tr>
+  <tr><td><b>Bases de datos</b></td><td>PostgreSQL · Supabase · MySQL</td></tr>
+  <tr><td><b>DevOps</b></td><td>Docker · CI/CD (GitHub Actions) · Vercel</td></tr>
+  <tr><td><b>Integraciones</b></td><td>n8n · WhatsApp API · OpenRouter</td></tr>
+  <tr><td><b>Desarrollo con IA</b></td><td>Claude Code · Cursor</td></tr>
+</table>
 
 <h3>$ cat experiencia.txt</h3>
 
