@@ -1,42 +1,7 @@
 {
  "username": "Nogarr",
- "total": 731,
+ "total": 732,
  "days": [
-  {
-   "date": "2025-11-16",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-17",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-18",
-   "level": 4,
-   "count": 21
-  },
-  {
-   "date": "2025-11-19",
-   "level": 4,
-   "count": 78
-  },
-  {
-   "date": "2025-11-20",
-   "level": 1,
-   "count": 1
-  },
-  {
-   "date": "2025-11-21",
-   "level": 4,
-   "count": 71
-  },
-  {
-   "date": "2025-11-22",
-   "level": 0,
-   "count": 0
-  },
   {
    "date": "2025-11-23",
    "level": 0,
@@ -1854,6 +1819,11 @@
   },
   {
    "date": "2026-11-21",
+   "level": 1,
+   "count": 1
+  },
+  {
+   "date": "2026-11-22",
    "level": 0,
    "count": 0
   }
